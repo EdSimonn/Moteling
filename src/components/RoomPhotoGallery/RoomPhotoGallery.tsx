@@ -18,7 +18,6 @@ type SwiperCallback = (swiper: SwiperCore) => void;
 
 import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Image from "next/image";
-import { hotelImages } from "@/constants";
 
 const RoomPhotoGallery: React.FC<{ images: ImageType[] }> = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);

@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import useSWR from "swr";
 import LoadingSpinner from "../../loading";
 import ReservationCard from "@/components/Cards/ReservationCard/ReservationCard";
-import { merriweather, pacifico } from "@/utils/fonts";
+import { pacifico } from "@/utils/fonts";
 
 const ReservationsPage = (props: { params: { id: string } }) => {
   const {
@@ -51,10 +51,6 @@ const ReservationsPage = (props: { params: { id: string } }) => {
       <h1 className={`${pacifico} text-5xl font-extrabold`}>My Reservations</h1>
 
       <hr className='my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-5' />
-
-      {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8'>
-        <ReservationCard bookingDetails={userBookings} setRoomId={setRoomId} />
-      </div> */}
 
       {userBookings && userBookings.length > 0 ? (
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8'>

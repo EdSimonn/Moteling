@@ -196,25 +196,6 @@ const RoomDetailsPage = (props: { params: { slug: string } }) => {
 
               <p className='text-md font-normal text-gray-600 leading-6 tracking-tight mb-6'>
                 {room.description}
-                {/* Executive Room comprises of 1 Double Bed or 2 Twin Beds, 2 Bedside
-              Tables, a Desk & Chair. The room is furnished with wall to wall
-              carpeting, trendy furnishings and a balcony. Our ultramodern glass
-              bathroom is equipped with hairdryer, magnifying shaving and make
-              up mirror as well as all the amenities you could possible need
-              during your stay. A Complimentary Bottle of Wine, Fresh Fruit and
-              Mineral Water, are provided on arrival. Electric current: 220
-              Volts. Smoking rooms & inter-connecting rooms are also available.{" "}
-              <br />
-              All our Deluxe rooms have big windows to help you take a broad
-              view of the cityscape and nature. We offer bigger bed and every
-              bathroom has bathtub and shower, which brings relaxation to you
-              after a long day. */}
-
-                {/* <i class='fa-solid fa-bed'></i>
-                <i class='fa-solid fa-bath'></i>
-                <i class='fa-solid fa-users-line'></i>
-                <i class='fa-solid fa-location-dot'></i>
-                <i class='fa-solid fa-expand'></i> */}
               </p>
 
               <p className='text-md font-normal text-gray-600 leading-6 tracking-tight'>

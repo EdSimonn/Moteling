@@ -1,7 +1,7 @@
 /** @format */
 
 import { NextAuthOptions } from "next-auth";
-import { SanityAdapter, SanityCredentials } from "next-auth-sanity";
+import { SanityAdapter } from "next-auth-sanity";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import { SanityClient } from "@sanity/client"; // Import SanityClient

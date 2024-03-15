@@ -2,11 +2,7 @@
 
 "use client";
 
-import Image from "next/image";
-import { e1 } from "../../../public/assets";
-
 export default function Error({
-  error,
   reset,
 }: {
   error: Error & { digest?: string };

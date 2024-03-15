@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import { b1 } from "../../../public/assets";
+import { r1 } from "../../../public/assets";
 import Accordion from "./ReasonAccordion";
 import { pacifico } from "@/utils/fonts";
 
@@ -12,7 +12,7 @@ const Reason = () => {
       <Image
         className='sm:w-1/2 w-full sm:h-[32rem] md:h-[32rem] lg:h-[34rem] h-[100%] bg-black'
         priority={true}
-        src={b1}
+        src={r1}
         alt={""}
       />
       <div className='sm:w-1/2 w-full h-[100%] flex flex-col'>

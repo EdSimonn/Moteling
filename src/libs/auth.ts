@@ -4,8 +4,12 @@ import { NextAuthOptions } from "next-auth";
 import { SanityAdapter, SanityCredentials } from "next-auth-sanity";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import { SanityClient } from "@sanity/client"; // Import SanityClient
 
 import sanityClient from "./sanity";
+
+// Assert the type of sanityClient to be SanityClient
+const client: SanityClient = sanityClient as SanityClient;
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -21,13 +25,13 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
-  adapter: SanityAdapter(sanityClient),
+  adapter: SanityAdapter(client), // Pass client to SanityAdapter
   debug: process.env.NODE_ENV === "development",
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     session: async ({ session, token }) => {
       const userEmail = token.email;
-      const userIdObj = await sanityClient.fetch<{ _id: string }>(
+      const userIdObj = await client.fetch<{ _id: string }>( // Use client instead of sanityClient
         `*[_type == "user" && email == $email][0] {
             _id
         }`,

@@ -11,7 +11,7 @@ const Footer = () => {
     <footer data-name='footer' className='text-white'>
       <div className='mx-auto w-full max-w-screen-xl ss:p-10 p-4 py-6 lg:py-8'>
         <p
-          className={`${merriweather} flex items-center justify-center mb-12 font-bold text-3xl text-center pt-6`}
+          className={`flex items-center justify-center mb-12 font-bold text-3xl text-center pt-6`}
         >
           Sign Up For Exclusive <br className='' /> Offers From Us
         </p>

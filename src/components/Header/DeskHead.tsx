@@ -163,15 +163,13 @@ const DeskHead = () => {
                   )}
                 </div>
               ) : (
-                <Link href=''>
-                  <button
-                    onClick={loginHandler}
-                    type='button'
-                    className='px-6 py-3 rounded text-sm font-medium text-white flex items-center bg-primary hover:bg-primary2'
-                  >
-                    Sign In
-                  </button>
-                </Link>
+                <button
+                  onClick={loginHandler}
+                  type='button'
+                  className='px-6 py-3 rounded text-sm font-medium text-white flex items-center bg-primary hover:bg-primary2'
+                >
+                  <Link href=''>Sign In</Link>
+                </button>
               )}
             </div>
           </div>

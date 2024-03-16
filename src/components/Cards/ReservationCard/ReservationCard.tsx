@@ -38,7 +38,7 @@ const ReservationCard: FC<Props> = ({ bookingDetails, setRoomId }) => {
             />
             <div className='group-hover:text-white'>
               <h3
-                className={`${merriweather}`}
+                className={`${merriweather} cursor-pointer`}
                 onClick={() =>
                   router.push(`/rooms/${booking.hotelRoom.slug.current}`)
                 }

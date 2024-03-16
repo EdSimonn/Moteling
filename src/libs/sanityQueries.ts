@@ -53,7 +53,7 @@ export const getUserBookingsQuery = groq`*[_type == 'booking' && user._ref == $u
         name,
         slug,
         price,
-        coverImage,
+    coverImage,
     },
     checkinDate,
     checkoutDate,

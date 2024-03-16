@@ -22,7 +22,8 @@ const booking = {
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "checkInDate",
+      name: "checkinDate",
+      // name: "checkInDate",
       title: "Check-In Date",
       type: "date",
       validation: (Rule) => Rule.required(),

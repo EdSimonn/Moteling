@@ -49,7 +49,7 @@ const RoomDetailsPage = (props: { params: { slug: string } }) => {
   const [ratingText, setRatingText] = useState("");
 
   const reviewSubmitHandler = async () => {
-    console.log(ratingText, ratingValue);
+    // console.log(ratingText, ratingValue);
     if (!ratingText.trim().length || !ratingValue) {
       return toast.error("Please provide a rating text and a rating");
     }
@@ -67,10 +67,10 @@ const RoomDetailsPage = (props: { params: { slug: string } }) => {
         ratingValue,
         roomId,
       });
-      console.log(data);
+      // console.log(data);
       toast.success("Review Submitted");
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("Review Failed");
     } finally {
       setRatingText("");
@@ -137,7 +137,7 @@ const RoomDetailsPage = (props: { params: { slug: string } }) => {
         }
       }
     } catch (error) {
-      console.log("Error: ", error);
+      // console.log("Error: ", error);
       toast.error("An error occured");
     }
   };

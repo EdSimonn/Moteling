@@ -20,7 +20,7 @@ const Rooms = () => {
   useEffect(() => {
     const roomType = searchParams.get("");
 
-    // console.log(roomType);
+    console.log(roomType);
 
     if (roomType) setRoomTypeFilter(roomType);
   }, [searchParams]);
@@ -35,7 +35,7 @@ const Rooms = () => {
   if (typeof data === "undefined" && !isLoading)
     throw new Error("Cannot fetch Data");
 
-  // console.log(data);
+  console.log(data);
 
   const filterRooms = (rooms: Room[]) => {
     return rooms.filter((room) => {

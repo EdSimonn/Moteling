@@ -93,7 +93,7 @@ export async function POST(req: Request, res: Response) {
       statusText: "Payment session created",
     });
   } catch (error: any) {
-    // console.log("Payment falied", error);
+    console.log("Payment falied", error);
     return new NextResponse(error, { status: 500 });
   }
 }

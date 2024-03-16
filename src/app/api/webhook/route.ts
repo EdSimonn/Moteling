@@ -29,7 +29,7 @@ export async function POST(req: Request, res: Response) {
   switch (event.type) {
     case checkout_session_completed:
       const session = event.data.object;
-      // console.log(session);
+      console.log(session);
 
       const {
         // @ts-ignore
@@ -67,7 +67,7 @@ export async function POST(req: Request, res: Response) {
       });
 
     default:
-    // console.log(`Unhandled event type ${event.type}`);
+      console.log(`Unhandled event type ${event.type}`);
   }
 
   return NextResponse.json("Event Received", {

@@ -13,6 +13,7 @@ const nextConfig = {
       "www.slingacademy.com",
       "img.freepik.com",
       "images.pexels.com",
+      "plus.unsplash.com",
     ],
   },
 };

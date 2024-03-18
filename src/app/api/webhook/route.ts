@@ -3,7 +3,8 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
-import { createBooking, updateHotelRoom } from "@/libs/apis";
+import { createBooking } from "@/libs/apis";
+import { error } from "console";
 
 const checkout_session_completed = "checkout.session.completed";
 
@@ -25,11 +26,12 @@ export async function POST(req: Request, res: Response) {
     return new NextResponse(`Webhook Error: ${error.message}`, { status: 500 });
   }
 
+  console.log(error);
+
   // load our event
   switch (event.type) {
     case checkout_session_completed:
       const session = event.data.object;
-      console.log(session);
 
       const {
         // @ts-ignore
@@ -59,7 +61,6 @@ export async function POST(req: Request, res: Response) {
       });
 
       //   Update hotel Room
-      await updateHotelRoom(hotelRoom);
 
       return NextResponse.json("Booking successful", {
         status: 200,

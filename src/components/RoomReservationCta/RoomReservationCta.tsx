@@ -4,7 +4,6 @@ import { merriweather } from "@/utils/fonts";
 import { Dispatch, FC, SetStateAction } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { MdOutlineCalendarMonth } from "react-icons/md";
 
 type Props = {
   checkinDate: Date | null;
@@ -85,9 +84,7 @@ const RoomReservationCta: FC<Props> = (props) => {
               minDate={calcMinCheckoutDate()}
               id='check-out-date'
               className='w-full border text-black border-gray-300 rounded-lg p-2.5 focus:ring-primary focus:border-primary'
-            >
-              <MdOutlineCalendarMonth />
-            </DatePicker>
+            ></DatePicker>
           </div>
         </div>
       </div>
@@ -162,9 +159,9 @@ const RoomReservationCta: FC<Props> = (props) => {
       <button
         disabled={isBooked}
         onClick={handleBookNowClick}
-        className='w-full px-5 py-4 mt-6 text-sm rounded-sm font-medium text-white flex justify-center items-center bg-primary hover:bg-primary2'
+        className='w-full px-5 py-4 mt-6 text-md rounded-sm font-medium text-white flex justify-center items-center bg-primary hover:bg-primary2'
       >
-        {0 ? "Booked" : "Book Now"}
+        {isBooked ? "Booked" : "Book Now"}
       </button>
     </div>
   );

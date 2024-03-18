@@ -87,7 +87,19 @@ const RoomDetailsPage = (props: { params: { slug: string } }) => {
   };
 
   // const { data: room, error, isLoading } = useSWR("/api/room", fetchRoom);
-  const { data: room, error, isLoading } = useSWR("/api/room", fetchRoom);
+  // Fetch room data
+  const {
+    data: room,
+    error,
+    isLoading,
+  } = useSWR(slug ? `/api/room/${slug}` : null, fetchRoom);
+
+  // Handle loading and error states
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <div>Error: {error.message}</div>;
+
+  // Handle missing room data
+  if (!room) return <div>No room data found.</div>;
 
   if (error) throw new Error("Cannot fetch data");
   if (typeof room === "undefined" && !isLoading)
@@ -106,10 +118,10 @@ const RoomDetailsPage = (props: { params: { slug: string } }) => {
 
   const handleBookNowClick = async () => {
     if (!checkinDate || !checkoutDate)
-      return toast.error("Tinubu provide correct date");
+      return toast.error("Please provide checkin / checkout date");
 
     if (checkinDate > checkoutDate)
-      return toast.error("Abacha choose better checkin period");
+      return toast.error("Please choose a valid checkin period");
 
     const numberOfDays = calcNumDays();
 

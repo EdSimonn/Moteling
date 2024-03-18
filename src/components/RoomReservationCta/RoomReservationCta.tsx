@@ -159,7 +159,7 @@ const RoomReservationCta: FC<Props> = (props) => {
       <button
         disabled={isBooked}
         onClick={handleBookNowClick}
-        className='w-full px-5 py-4 mt-6 text-md rounded-sm font-medium text-white flex justify-center items-center bg-primary hover:bg-primary2'
+        className='w-full px-5 py-4 mt-6 text-md rounded-sm font-medium text-white flex justify-center items-center bg-primary hover:bg-primary2 disabled:bg-gray-500 disabled:cursor-not-allowed'
       >
         {isBooked ? "Booked" : "Book Now"}
       </button>

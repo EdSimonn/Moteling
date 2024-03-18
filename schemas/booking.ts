@@ -21,12 +21,12 @@ const booking = {
       to: [{ type: "hotelRoom" }],
       validation: (Rule) => Rule.required(),
     }),
-    defineField({
-      name: "checkinDate",
-      title: "Check-In Date",
-      type: "date",
-      validation: (Rule) => Rule.required(),
-    }),
+    // defineField({
+    //   name: "checkinDate",
+    //   title: "Check-In Date",
+    //   type: "date",
+    //   validation: (Rule) => Rule.required(),
+    // }),
     defineField({
       name: "checkoutDate",
       title: "Check-out Date",

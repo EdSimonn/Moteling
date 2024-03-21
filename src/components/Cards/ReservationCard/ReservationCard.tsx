@@ -31,12 +31,12 @@ const ReservationCard: FC<Props> = ({ bookingDetails, setRoomId }) => {
         >
           <div className='flex flex-row gap-4 group'>
             <Image
-              // priority={true}
+              priority={true}
               src={booking.hotelRoom.coverImage}
               alt='bi'
-              className='h-48 w-48'
-              width={150}
-              height={150}
+              className='block md:h-[18rem] sm:h-[12rem] xs:h-[12rem] h-full w-full rounded object-cover object-center'
+              width={800} // Increase the width to 400
+              height={200}
             />
             <div className='group-hover:text-white'>
               <h3

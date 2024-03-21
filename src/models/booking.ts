@@ -7,7 +7,9 @@ export type Booking = {
     name: string;
     slug: { current: string };
     price: number;
-    coverImage: string;
+    coverImage: {
+      url: string; // Assuming coverImage is an object with a 'url' property
+    };
   };
   checkinDate: string;
   checkoutDate: string;

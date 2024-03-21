@@ -35,6 +35,8 @@ const ReservationCard: FC<Props> = ({ bookingDetails, setRoomId }) => {
               src={booking.hotelRoom.coverImage}
               alt='bi'
               className='h-48 w-48'
+              width={150}
+              height={150}
             />
             <div className='group-hover:text-white'>
               <h3

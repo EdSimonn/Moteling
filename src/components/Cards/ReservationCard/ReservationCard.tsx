@@ -31,7 +31,7 @@ const ReservationCard: FC<Props> = ({ bookingDetails, setRoomId }) => {
         >
           <div className='flex flex-row gap-4 group'>
             <Image
-              priority={true}
+              // priority={true}
               src={booking.hotelRoom.coverImage}
               alt='bi'
               className='h-48 w-48'

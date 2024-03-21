@@ -34,9 +34,9 @@ const ReservationCard: FC<Props> = ({ bookingDetails, setRoomId }) => {
               priority={true}
               src={booking.hotelRoom.coverImage}
               alt='bi'
-              className='block md:h-[18rem] sm:h-[12rem] xs:h-[12rem] h-full w-full rounded object-cover object-center'
-              width={800} // Increase the width to 400
-              height={200}
+              className='h-48 w-48'
+              width={150}
+              height={150}
             />
             <div className='group-hover:text-white'>
               <h3

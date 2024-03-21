@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { Dispatch, FC, SetStateAction } from "react";
+import { FC } from "react";
 import { useRouter } from "next/navigation";
 
 import { Booking } from "@/models/booking";
@@ -16,10 +16,9 @@ import { merriweather } from "@/utils/fonts";
 
 type Props = {
   bookingDetails?: Booking[];
-  setRoomId: Dispatch<SetStateAction<string | null>>;
 };
 
-const ReservationCard: FC<Props> = ({ bookingDetails, setRoomId }) => {
+const ReservationCard: FC<Props> = ({ bookingDetails }) => {
   const router = useRouter();
 
   return (
@@ -40,7 +39,7 @@ const ReservationCard: FC<Props> = ({ bookingDetails, setRoomId }) => {
             />
             <div className='group-hover:text-white'>
               <h3
-                className={`${merriweather}`}
+                className={`${merriweather} cursor-pointer hover:text-secondary`}
                 onClick={() =>
                   router.push(`/rooms/${booking.hotelRoom.slug.current}`)
                 }
@@ -88,7 +87,7 @@ const ReservationCard: FC<Props> = ({ bookingDetails, setRoomId }) => {
                 <p className='py-[7px] text-sm flex gap-1 '>
                   Reserved At :
                   <p className='bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full'>
-                    {booking._createdAt.split("T")[0]}{" "}
+                    {booking._createdAt.split("T")[0]}
                   </p>
                 </p>
               </div>

@@ -1,20 +1,18 @@
 /** @format */
 "use client";
 
+import ReservationCard from "@/components/Cards/ReservationCard/ReservationCard";
 import { getUserBookings } from "@/libs/apis";
-import axios from "axios";
 import { User } from "@/models/user";
-import React, { useState } from "react";
+import { pacifico } from "@/utils/fonts";
 import useSWR from "swr";
 import LoadingSpinner from "../../loading";
-import ReservationCard from "@/components/Cards/ReservationCard/ReservationCard";
-import { pacifico } from "@/utils/fonts";
+import axios from "axios";
 
 const ReservationsPage = (props: { params: { id: string } }) => {
   const {
     params: { id: userId },
   } = props;
-  const [roomId, setRoomId] = useState<string | null>(null);
 
   const fetchUserBooking = async () => getUserBookings(userId);
   const fetchUserData = async () => {
@@ -47,17 +45,14 @@ const ReservationsPage = (props: { params: { id: string } }) => {
   console.log(userBookings);
 
   return (
-    <div className='mx-auto w-full max-w-screen-xl ss:p-10 p-4 py-6 lg:py-8'>
+    <div className='mx-auto w-full max-w-screen-xl ss:p-10 p-4 py-6 lg:py-8 bg-[rgb(249,247,244)]'>
       <h1 className={`${pacifico} text-5xl font-extrabold`}>My Reservations</h1>
 
-      <hr className='my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-5' />
+      <hr className='my-6 border-gray-300 sm:mx-auto dark:border-gray-200 lg:my-5' />
 
       {userBookings && userBookings.length > 0 ? (
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8'>
-          <ReservationCard
-            bookingDetails={userBookings}
-            setRoomId={setRoomId}
-          />
+          <ReservationCard bookingDetails={userBookings} />
         </div>
       ) : isLoading ? (
         <p className='text-center'>Loading...</p>

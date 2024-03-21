@@ -33,7 +33,7 @@ const ReservationCard: FC<Props> = ({ bookingDetails }) => {
               priority={true}
               src={booking.hotelRoom.coverImage.url}
               alt='bi'
-              className='h-48 w-48'
+              className='h-48 w-48 cursor-pointer'
               width={150}
               height={150}
               onClick={() =>

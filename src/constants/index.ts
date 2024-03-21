@@ -1,5 +1,5 @@
 /** @format */
-import { b1, b2 } from "../../public/assets";
+import { b1, b2, p1, p2, p3 } from "../../public/assets";
 
 export const blogPost = [
   {
@@ -31,21 +31,21 @@ export const blogPost = [
 export const testimonials = [
   {
     desc: "Last Friday I came for restaurant week. It was FABULOUS! The portions were overly generous. Everything was so yummy – what a bargain. I will be back soon",
-    img: b1,
+    img: p1,
     name: "Jamie Richardson",
     title: "Founder Lokamart",
   },
   {
     desc: "“Great food at reasonable prices. Great service and the owners are terrific. This was my first time to visit this restaurant, but it will not be my last!”",
-    img: b1,
+    img: p2,
     name: "Rebecca Ryan",
     title: "Founder Lokamart",
   },
   {
     desc: "Thank you for a truly amazing stay! Your hospitality is quite outstanding. The sports centre is also very good with excellent quality tennis courts. Hope to be back soon",
-    img: b1,
     name: "Angela Molina",
     title: "CEO Nice",
+    img: p3,
   },
 ];
 
